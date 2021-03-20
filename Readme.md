@@ -20,7 +20,7 @@ If you want to try the docker image (which presently only works with the server)
 
 To build the docker image and directly run the web app:
 
-    docker build -t keywording-web-app . && docker run --rm -it -p 8080:8080 keywording-web-app
+    docker build -t keywording-web-app . && docker run --rm -it -p 8080:8080 keywording-web-app
 
 Then go to http://localhost:8080 .
 
@@ -40,19 +40,19 @@ This file contains everything from a list of what classes are being trained/scra
 
 ### To Scrape New Data for One Specific Keyword
 
-    python -m fire scrape.py scrape --search_term=seamless+pattern+<SEARCH_TERM> --number_of_pages=<NUMBER_OF_PAGES>
+    python -m fire scrape.py scrape --search_term=seamless+pattern+<SEARCH_TERM> --number_of_pages=<NUMBER_OF_PAGES>
 
 where <SEARCH_TERM> is the keyword you want besides seamless and pattern, 
 and <NUMBER_OF_PAGES> is obviously the number of pages you want to scrape.  Each page typically has about 100 images.
 
 For example:
 
-    python -m fire scrape.py scrape --search_term=seamless+pattern+apple --number_of_pages=1
-    python -m fire scrape.py scrape --search_term=seamless+pattern+floral --number_of_pages=1
+    python -m fire scrape.py scrape --search_term=seamless+pattern+apple --number_of_pages=1
+    python -m fire scrape.py scrape --search_term=seamless+pattern+floral --number_of_pages=1
 
 ### To Scrape New Data for ALL Classes Listed in CLASSES in config.py
 
-    python -m fire scrape.py scrape_all_classes --pages_per_class=1
+    python -m fire scrape.py scrape_all_classes --pages_per_class=1
 
 Be careful with this one.... there are currently 145 classes listed in the config file.  (Running that for one page per keyword would get you about 6,785 images.)
 
@@ -60,13 +60,13 @@ If for any reason you need to change the user_agent that is passed along with th
 
 ### To Clean the data in the data/csvs_raw and data/images_raw folders, use:
 
-    python clean_data_and_images.py
+    python clean_data_and_images.py
 
 If you don't want to include all data ever gathered and stored in that folder, be sure to clean out any unwanted csvs first.  Images are only cleaned if they are listed in a csv that is cleaned.  The resulting cleaned csv would appear in data/csvs_ready  and all resulting cleaned images would appear in data/images_ready.  Images that have already been cleaned in the past (and are already in the data/images_ready folder) are ignored and not cleaned again.
 
 ### To save out a report of class counts (for each class in CLASSES in config.py and based on the csvs in data/csvs_ready) into reports folder, use:
 
-    python -m fire eda_report.py report_class_counts
+    python -m fire eda_report.py report_class_counts
 
 Use this of course to check up on class balance.  The report will appear in the reports folder.
 
@@ -74,31 +74,31 @@ Use this of course to check up on class balance.  The report will appear in the 
 
 To train a new model based on ResNet50 and initialized wiht imagenet weights, use:
 
-    python -m fire train_model.py train_from_ResNet50_imagenet_weights
+    python -m fire train_model.py train_from_ResNet50_imagenet_weights
 
 To continue training an existing model, which is specified as USE_MODEL in config.py, use:
 
-    python -m fire train_model.py train_from_hdf5_file
+    python -m fire train_model.py train_from_hdf5_file
 
 To specify a different model to continue training from, use:
 
-    python -m fire train_model.py train_from_hdf5_file --filename="model-20210317160456894379-18-MCC0.58.hdf5"
+    python -m fire train_model.py train_from_hdf5_file --filename="model-20210317160456894379-18-MCC0.58.hdf5"
 
 where the given filename is in the models directory
 
 ### To Evaluate a model and get a console printout, use:
 
-    python -m fire evaluate_model.py evaluate_model --model_file="model-20210317160456894379-18-MCC0.58.hdf5"
+    python -m fire evaluate_model.py evaluate_model --model_file="model-20210317160456894379-18-MCC0.58.hdf5"
 
 ### To Evaluate a model and get a console printout AND save the analysis into the models directory next to the model file, use:
 
-    python -m fire evaluate_model.py evaluate_model_and_save --model_file="model-20210317160456894379-18-MCC0.58.hdf5"
+    python -m fire evaluate_model.py evaluate_model_and_save --model_file="model-20210317160456894379-18-MCC0.58.hdf5"
 
 You will get both a printout in the console AND a file in the models directory that saves the results.
 
 ### To start the web app (on YOUR machine.... not in Docker) which uses the model listed as USE_MODEL in config.py, use:
 
-    python server.py serve
+    python server.py serve
 
 Then visit http://localhost:8080 in your browser.
 
