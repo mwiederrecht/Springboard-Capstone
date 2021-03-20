@@ -1,0 +1,6 @@
+[run]
+source =
+    D:\Springboard-Capstone\app
+
+omit =
+    D:\Springboard-Capstone\app\scrapy\*
