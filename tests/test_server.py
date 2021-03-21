@@ -10,7 +10,7 @@ from app.config import GPATH
 
 # Testing the prepare_image() function from server.py
 def test_prepare_image():
-    img = Image.open(GPATH/'tests/test_images/damask-seamless-pattern_1236-57.jpg')
+    img = Image.open(GPATH.parent/'tests'/'test_images'/'damask-seamless-pattern_1236-57.jpg')
     x = s.prepare_image(img, (224, 224))
     assert (math.isclose(x[0][0][0][0], 0.90588236, rel_tol=0.0001) and  # first item is correctish
            math.isclose(np.mean(x), 0.62827986, rel_tol=0.0001) and      # mean is correctish
@@ -19,9 +19,7 @@ def test_prepare_image():
 
 # Testing the decode_predictions() function from server.py
 def test_decode_predictions():
-    preds = [[0.38273498, 0.0038811, 0.0239934, 0.00573327, 0.58115244,
-              0.5090237, 0.03060067, 0.72172683, 0.15080863, 0.00202293,
-              0.01625071, 0.00836794]]
-    expected_results_beginning = '<ul><li><b>grungy</b> (0.72)</il>'
-    assert (s.decode_predictions(preds[0]).startswith(expected_results_beginning))
-
+    preds = s.model_predict(GPATH.parent/'tests'/'test_images'/'damask-seamless-pattern_1236-57.jpg', s.model)
+    decoded = s.decode_predictions(preds)
+    keywords = [x for (x, _) in decoded]
+    assert "damask" in keywords

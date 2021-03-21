@@ -1,0 +1,7 @@
+.git
+.pytest_cache
+licences
+springboard_capstone.egg-info
+test_images
+tests
+app/data_ALL
