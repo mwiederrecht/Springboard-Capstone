@@ -1,4 +1,4 @@
-from app.config import GPATH, READY_IMAGE_DIRECTORY, MODELS_PATH, TRAINING_CONFIG as tc, CLASSES, RANDOM_STATE
+from app.config import GPATH, READY_IMAGE_DIRECTORY, MODELS_PATH, TRAINING_CONFIG as tc, CLASSES, RANDOM_STATE, logging
 import os
 #os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 import tensorflow as tf
@@ -74,7 +74,6 @@ def evaluate_model(model_file):
 
     pred = get_predictions(model, Xy_test)
     analysis = evaluate(Xy_test, pred)
-    print(analysis)
     return analysis
 
 def evaluate_model_and_save(model_file):

@@ -1,7 +1,7 @@
 from pathlib import Path
 from app.helpers import dotdict
 
-GPATH = Path(__file__).parent.parent  # G for global.
+GPATH = Path(__file__).parent  # G for global.
 
 import logging
 LOG_FILE = 'logs/app.log'
@@ -26,7 +26,7 @@ NUM_PAGES_TO_SCRAPE = 1    # There are about 100 images per page
 STARTING_PAGE = 1
 
 # Cleaning
-MASK_IMAGE = "app/mask.png"
+MASK_IMAGE = "mask.png"
 NUMBER_OF_THREADS_FOR_IMAGE_CLEANING = 10
 
 # Classes
@@ -52,6 +52,6 @@ TRAINING_CONFIG = dotdict({
 
 # Web App
 USE_MODEL = "model-20210317160456894379-18-MCC0.58.hdf5"
-STATIC_CONTENT_PATH = "app/static"
+STATIC_CONTENT_PATH = "static"
 THRESHOLD_FOR_SHOWING_USER = 0.5
 TMP_IMG_FILE = "tmp/saved_image.jpg"

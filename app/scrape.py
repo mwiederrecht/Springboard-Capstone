@@ -29,7 +29,7 @@ def scrape(search_term=SEARCH_TERM, number_of_pages=1):
     
     logging.info(f"Scrape command: {command}")
 
-    spider_path = GPATH/'app/scrapy'
+    spider_path = GPATH/'scrapy'
     os.chdir(spider_path)
     os.system(command)
 

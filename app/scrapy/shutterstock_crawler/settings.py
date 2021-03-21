@@ -8,14 +8,11 @@
 #     https://docs.scrapy.org/en/latest/topics/settings.html
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-from pathlib import Path
-path = Path(__file__).parent.parent.parent.parent
-
 import sys
 sys.path.append('..')
 import os
 print(os.getcwd())
-from config import RAW_IMAGE_DIRECTORY
+from config import RAW_IMAGE_DIRECTORY, GPATH
 
 BOT_NAME = 'shutterstock_crawler'
 
@@ -23,8 +20,7 @@ SPIDER_MODULES = ['shutterstock_crawler.spiders']
 NEWSPIDER_MODULE = 'shutterstock_crawler.spiders'
 
 ITEM_PIPELINES = {'scrapy.pipelines.images.ImagesPipeline' : 1}
-images_dir_path = path/RAW_IMAGE_DIRECTORY
-IMAGES_STORE = str(images_dir_path)
+IMAGES_STORE = str(GPATH/RAW_IMAGE_DIRECTORY)
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'shutterstock_crawler (+http://www.yourdomain.com)'

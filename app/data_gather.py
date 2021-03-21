@@ -1,5 +1,5 @@
 from pathlib import Path
-from app.config import READY_CSV_DIRECTORY, RANDOM_STATE, CLASSES, TRAINING_CONFIG as tc
+from app.config import GPATH, READY_CSV_DIRECTORY, RANDOM_STATE, CLASSES, TRAINING_CONFIG as tc
 import glob
 import numpy as np
 import pandas as pd
@@ -7,8 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 
 def get_raw_dataframe():
-    gpath = Path(__file__).parent.parent
-    files = glob.glob("{}/*.csv".format(gpath/READY_CSV_DIRECTORY))
+    files = glob.glob("{}/*.csv".format(GPATH/READY_CSV_DIRECTORY))
     df = pd.concat((pd.read_csv(f) for f in files)).set_index('id')
     df = df[~df.index.duplicated(keep='first')]
     return df

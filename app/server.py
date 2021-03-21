@@ -41,6 +41,7 @@ def prepare_image(image, target):
 
 # Takes the predicitons from the model and outputs nice HTML of the top predictions sorted
 def decode_predictions(preds):
+    preds = preds[0]
     cp = list(zip(CLASSES, preds)) # putting class names in with predictions
     cpf = list(filter(lambda x: x[1] > THRESHOLD_FOR_SHOWING_USER, cp)) # filter out the predictions that are lower than the threshold
     cpf = list(filter(lambda x: x[0] != "sea", cpf))   # Don't ask.  Shouldn't have used that keyword, cuz duh it is in every single one cuz it is in 'seamless'
@@ -57,8 +58,7 @@ def model_predict(img_path, m):
     img = image.load_img(img_path, target_size=(224, 224)) # Reading in the image from disk
     x = prepare_image(img, target=(224, 224)) # pre-processing the image for the model
     preds = m.predict(x) # running the image through the model to get predictions
-    results = decode_predictions(preds[0])
-    return results
+    return preds
 
 # Asynchronous Steps
 loop = asyncio.get_event_loop()
@@ -79,7 +79,8 @@ async def upload(request):
     img_bytes = await (data["file"].read()) # upload the image
     with open(GPATH/TMP_IMG_FILE, 'wb') as f: f.write(img_bytes) # save the image file to the temp location
     pred = model_predict(GPATH/TMP_IMG_FILE, model)
-    results = get_predictions_html(pred)
+    decoded = decode_predictions(pred)
+    results = get_predictions_html(decoded)
     result_html1 = GPATH/STATIC_CONTENT_PATH/'result1.html'
     result_html2 = GPATH/STATIC_CONTENT_PATH/'result2.html'
     result_html = str(result_html1.open().read() + str(results) + result_html2.open().read())
@@ -106,8 +107,9 @@ async def predict(request):
     img_bytes = await (data["file"].read()) # upload the image
     with open(GPATH/TMP_IMG_FILE, 'wb') as f: f.write(img_bytes) # save the image file to the temp location
     pred = model_predict(GPATH/TMP_IMG_FILE, model)
-    pred = [(a, f'{b:.3f}') for (a, b) in pred]
-    return JSONResponse(dict(pred))
+    decoded = decode_predictions(pred)
+    stringified = [(a, f'{b:.3f}') for (a, b) in decoded]
+    return JSONResponse(dict(stringified))
 
 if __name__ == "__main__":
     if "serve" in sys.argv:
