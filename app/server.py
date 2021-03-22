@@ -50,8 +50,8 @@ def decode_predictions(preds):
     return cpf
     
 def get_predictions_html(cpf):
-    stringified = ["<li><b>{}</b> ({:.2f})</il> ".format(x[0], x[1]) for x in cpf] # one <li> tag for each prediction       # idea.... color by probability, also maybe different thresholds for different keywords
-    return ("<ul>" + " ".join(stringified) + "</ul>") # return the items it inside <ol> tags
+    stringified = ["<b>{}</b> ({:.2f})".format(x[0], x[1]) for x in cpf] # one <li> tag for each prediction       # idea.... color by probability, also maybe different thresholds for different keywords
+    return (", ".join(stringified)) # return the items it inside <ol> tags
 
 # Reads in the tmp image, prepares it, runs it through the model, decodes predictions, and serves up the resulting html
 def model_predict(img_path, m):

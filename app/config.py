@@ -18,13 +18,6 @@ MODELS_PATH = "models"
 REPORTS_PATH = "reports"
 EXTRACTED_FEATURES_DIRECTORY = "data/extracted_features"
 
-# Scraping
-SEARCH_TERM = "seamless+pattern+apple"
-START_URL = 'https://www.shutterstock.com/search/' + SEARCH_TERM
-USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36'
-NUM_PAGES_TO_SCRAPE = 1    # There are about 100 images per page
-STARTING_PAGE = 1
-
 # Cleaning
 MASK_IMAGE = "mask.png"
 NUMBER_OF_THREADS_FOR_IMAGE_CLEANING = 10
