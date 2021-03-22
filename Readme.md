@@ -6,7 +6,7 @@
 
 _If I asked you to provide me with 50 keywords each for the following images that are accurate, commonly searched on stock sites, and comprehensively describe the images, what would you say?  How long would it take you?  Would you miss anything important?_
 
-![Banner of 4 Pattern Images](captone_info\pattern_banner.png)
+![Banner of 4 Pattern Images](captone_info/pattern_banner.png)
 
 _Now imagine you were working as a stock image contributer (focusing on seamless patterns) and you were making and uploading at least 500 of these per week.  Keywording has suddenly become a very non-trivial, tedius, and exhausting task._
 
