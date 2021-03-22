@@ -84,15 +84,19 @@ To specify a different model to continue training from, use:
 
     python -m fire train_model.py train_from_hdf5_file --filename="model-20210317160456894379-18-MCC0.58.hdf5"
 
-where the given filename is in the models directory
+where the given filename is in the app/models directory
 
 ### To Evaluate a model and get a console printout, use:
 
     python -m fire evaluate_model.py evaluate_model --model_file="model-20210317160456894379-18-MCC0.58.hdf5"
 
+where the given filename is in the app/models directory
+
 ### To Evaluate a model and get a console printout AND save the analysis into the models directory next to the model file, use:
 
     python -m fire evaluate_model.py evaluate_model_and_save --model_file="model-20210317160456894379-18-MCC0.58.hdf5"
+
+where the given filename is in the app/models directory
 
 You will get both a printout in the console AND a file in the models directory that saves the results.
 
