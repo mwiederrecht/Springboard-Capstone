@@ -1,0 +1,61 @@
+30084 - 2021-03-22 18:30:53,599 - uvicorn.error - INFO - Started server process [30084]
+30084 - 2021-03-22 18:30:53,599 - uvicorn.error - INFO - Waiting for application startup.
+30084 - 2021-03-22 18:30:53,601 - uvicorn.error - INFO - Application startup complete.
+30084 - 2021-03-22 18:30:53,602 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+30084 - 2021-03-22 18:30:56,144 - root - INFO - Serving index.html
+30084 - 2021-03-22 18:31:11,878 - root - INFO - /upload endpoint hit
+30084 - 2021-03-22 18:31:12,176 - root - INFO - Preparing Image
+30084 - 2021-03-22 18:31:23,384 - root - INFO - Filtered and Sorted: [('flower', 0.9997614), ('flora', 0.9993304), ('floral', 0.9990564), ('nature', 0.97036767), ('spring', 0.92791003), ('leaf', 0.9068828), ('blossom', 0.9068433), ('summer', 0.86671335), ('plant', 0.85642153), ('beauty', 0.8436533), ('romantic', 0.8385966), ('beautiful', 0.7928928), ('rose', 0.7616387), ('abstract', 0.7530267), ('botanical', 0.73536867), ('bloom', 0.69600517), ('pink', 0.695422), ('color', 0.6859928), ('petal', 0.65771794), ('garden', 0.6560566), ('elegance', 0.64513063), ('colorful', 0.59432304), ('drawing', 0.54479593), ('artwork', 0.5436024), ('white', 0.5189555), ('paint', 0.51732564)]
+30084 - 2021-03-22 18:31:54,142 - root - INFO - Serving index.html
+30084 - 2021-03-22 18:31:59,942 - root - INFO - /upload endpoint hit
+30084 - 2021-03-22 18:32:01,681 - root - INFO - Preparing Image
+30084 - 2021-03-22 18:32:01,889 - root - INFO - Filtered and Sorted: [('holographic', 0.9984078), ('color', 0.99057126), ('rainbow', 0.98708004), ('trendy', 0.9869053), ('iridescent', 0.9841322), ('gradient', 0.982521), ('lines', 0.97456044), ('line', 0.95009273), ('pastel', 0.9434666), ('abstract', 0.9432761), ('vibrant', 0.8791169), ('bright', 0.8597905), ('stripe', 0.8565922), ('light', 0.8402965), ('purple', 0.76981306), ('hipster', 0.75719035), ('geometric', 0.74185234), ('elegant', 0.7418444), ('colorful', 0.6906781), ('beautiful', 0.65114504), ('effect', 0.5945868)]
+30084 - 2021-03-22 18:32:30,529 - root - INFO - Serving index.html
+30084 - 2021-03-22 18:32:38,530 - root - INFO - /upload endpoint hit
+30084 - 2021-03-22 18:32:38,827 - root - INFO - Preparing Image
+30084 - 2021-03-22 18:32:38,887 - root - INFO - Filtered and Sorted: [('tropic', 0.9995468), ('palm', 0.9993988), ('tropical', 0.99888986), ('nature', 0.9979856), ('summer', 0.9977962), ('plant', 0.9977869), ('exotic', 0.9974637), ('leaf', 0.9955369), ('jungle', 0.9943057), ('flora', 0.99283093), ('tree', 0.9909752), ('floral', 0.9908504), ('leaves', 0.96939474), ('foliage', 0.9676417), ('botanical', 0.93226075), ('hawaii', 0.9268787), ('branch', 0.8446622), ('blue', 0.8427311), ('color', 0.74960786), ('natural', 0.7494399), ('silhouette', 0.62770575), ('drawing', 0.5846724), ('dark', 0.5381767)]
+30084 - 2021-03-22 18:33:00,273 - root - INFO - Serving index.html
+30084 - 2021-03-22 18:33:07,321 - root - INFO - /upload endpoint hit
+30084 - 2021-03-22 18:33:08,252 - root - INFO - Preparing Image
+30084 - 2021-03-22 18:33:08,317 - root - INFO - Filtered and Sorted: [('geometric', 1.0), ('old', 0.9999999), ('white', 0.99999976), ('abstract', 0.99999964), ('boho', 0.9997236), ('grey', 0.993414), ('color', 0.95196533), ('ethnic', 0.9400708), ('gray', 0.90664357)]
+30084 - 2021-03-22 18:33:27,530 - root - INFO - Serving index.html
+30084 - 2021-03-22 18:33:53,349 - root - INFO - /upload endpoint hit
+30084 - 2021-03-22 18:33:54,901 - root - INFO - Preparing Image
+30084 - 2021-03-22 18:33:54,955 - root - INFO - Filtered and Sorted: [('flower', 0.97665715), ('flora', 0.96496606), ('floral', 0.9637658), ('abstract', 0.8922694), ('color', 0.8251982), ('rose', 0.82168067), ('nature', 0.7589044), ('blue', 0.7311459), ('summer', 0.7024247), ('beautiful', 0.61818445)]
+30084 - 2021-03-22 18:33:59,663 - root - INFO - Serving index.html
+30084 - 2021-03-22 18:34:31,030 - root - INFO - /upload endpoint hit
+30084 - 2021-03-22 18:34:31,535 - root - INFO - Preparing Image
+30084 - 2021-03-22 18:34:31,589 - root - INFO - Filtered and Sorted: [('hand', 0.7744804), ('drawn', 0.7358307), ('cartoon', 0.7354144), ('doodle', 0.68610287), ('cute', 0.66130817), ('star', 0.58187115), ('drawing', 0.5617053), ('happy', 0.52518857), ('color', 0.513955), ('orange', 0.5040219)]
+30084 - 2021-03-22 18:34:35,745 - root - INFO - Serving index.html
+30084 - 2021-03-22 18:34:54,133 - root - INFO - /upload endpoint hit
+30084 - 2021-03-22 18:34:54,434 - root - INFO - Preparing Image
+30084 - 2021-03-22 18:34:54,488 - root - INFO - Filtered and Sorted: [('floral', 0.98822474), ('flora', 0.9880531), ('damask', 0.936264), ('luxury', 0.9269342), ('old', 0.9029475), ('leaf', 0.85503316), ('victorian', 0.8391886), ('flower', 0.83763725), ('template', 0.7720856), ('baroque', 0.7086815), ('classic', 0.69590354), ('ornate', 0.6404781), ('antique', 0.58277524)]
+30084 - 2021-03-22 18:35:14,783 - root - INFO - Serving index.html
+30084 - 2021-03-22 18:35:22,542 - root - INFO - /upload endpoint hit
+30084 - 2021-03-22 18:35:22,696 - root - INFO - Preparing Image
+30084 - 2021-03-22 18:35:22,757 - root - INFO - Filtered and Sorted: [('abstract', 0.93797964), ('geometric', 0.8991627), ('line', 0.6131387), ('floral', 0.5802201), ('flora', 0.57174647), ('oriental', 0.5561427), ('color', 0.5458931), ('elegant', 0.51142913)]
+30084 - 2021-03-22 18:35:25,162 - root - INFO - Serving index.html
+30084 - 2021-03-22 18:35:32,162 - root - INFO - /upload endpoint hit
+30084 - 2021-03-22 18:35:32,518 - root - INFO - Preparing Image
+30084 - 2021-03-22 18:35:32,565 - root - INFO - Filtered and Sorted: [('abstract', 0.9557184), ('hand', 0.900777), ('color', 0.8817906), ('flora', 0.87389), ('floral', 0.86017686), ('drawn', 0.81613624), ('doodle', 0.7463181), ('wave', 0.7202679), ('nature', 0.7176672), ('line', 0.6467305), ('flower', 0.6459345)]
+30084 - 2021-03-22 18:35:34,812 - root - INFO - Serving index.html
+30084 - 2021-03-22 18:35:41,112 - root - INFO - /upload endpoint hit
+30084 - 2021-03-22 18:35:41,342 - root - INFO - Preparing Image
+30084 - 2021-03-22 18:35:41,389 - root - INFO - Filtered and Sorted: [('flower', 0.9971751), ('flora', 0.99198407), ('floral', 0.99048877), ('color', 0.9451235), ('leaf', 0.932277), ('summer', 0.91800386), ('nature', 0.9134568), ('beautiful', 0.90814275), ('spring', 0.9034007), ('yellow', 0.881353), ('abstract', 0.8651327), ('beauty', 0.8117799), ('blossom', 0.81000674), ('drawing', 0.7996726), ('garden', 0.75018895), ('watercolor', 0.7271321), ('bloom', 0.71697813), ('paint', 0.6767625), ('botanical', 0.6566371), ('rose', 0.651528), ('leaves', 0.60172427), ('colorful', 0.57594913), ('water', 0.5726407), ('pink', 0.5524166), ('hand', 0.54376984), ('elegance', 0.5419036), ('line', 0.52610904), ('cute', 0.52279097)]
+30084 - 2021-03-22 18:36:14,626 - root - INFO - Serving index.html
+30084 - 2021-03-22 18:36:28,090 - root - INFO - /upload endpoint hit
+30084 - 2021-03-22 18:36:28,308 - root - INFO - Preparing Image
+30084 - 2021-03-22 18:36:28,374 - root - INFO - Filtered and Sorted: [('abstract', 0.9476957), ('colorful', 0.8786143), ('color', 0.855637), ('geometric', 0.76237386), ('yellow', 0.6619913), ('line', 0.59771854), ('white', 0.5965045)]
+30084 - 2021-03-22 18:36:30,625 - root - INFO - Serving index.html
+30084 - 2021-03-22 18:36:36,035 - root - INFO - /upload endpoint hit
+30084 - 2021-03-22 18:36:36,252 - root - INFO - Preparing Image
+30084 - 2021-03-22 18:36:36,306 - root - INFO - Filtered and Sorted: [('abstract', 0.8504372), ('black', 0.8243517), ('drawn', 0.7995745), ('grunge', 0.7881778), ('tribal', 0.77595085), ('hand', 0.75513947), ('white', 0.7352297), ('ethnic', 0.6604121), ('water', 0.6434368), ('template', 0.6349238), ('paint', 0.6319354), ('creative', 0.62222385), ('line', 0.59913516), ('geometric', 0.58306146), ('boho', 0.5745302), ('monochrome', 0.5480727), ('brush', 0.5000859)]
+30084 - 2021-03-22 18:36:59,637 - root - INFO - Serving index.html
+30084 - 2021-03-22 18:37:10,651 - root - INFO - /upload endpoint hit
+30084 - 2021-03-22 18:37:11,006 - root - INFO - Preparing Image
+30084 - 2021-03-22 18:37:11,073 - root - INFO - Filtered and Sorted: [('abstract', 0.9834503), ('line', 0.95716965), ('black', 0.9523409), ('wavy', 0.9500242), ('lines', 0.87790173), ('white', 0.87438405), ('geometric', 0.8231651), ('shape', 0.77613145), ('stripe', 0.702866), ('curve', 0.66845053), ('simple', 0.6376168), ('monochrome', 0.6073473), ('creative', 0.5653283)]
+30084 - 2021-03-22 18:37:31,395 - uvicorn.error - INFO - Shutting down
+30084 - 2021-03-22 18:37:31,504 - uvicorn.error - INFO - Finished server process [30084]
+30084 - 2021-03-22 18:37:32,298 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-3' coro=<LifespanOn.main() running at C:\Users\mwied\AppData\Local\Programs\Python\Python38\lib\site-packages\uvicorn\lifespan\on.py:48> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x000002A8EB5DD1F0>()]>>
+30084 - 2021-03-22 18:37:32,298 - uvicorn.error - INFO - ASGI 'lifespan' protocol appears unsupported.
