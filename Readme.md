@@ -6,7 +6,7 @@
 
 _If I asked you to provide me with 50 keywords each for the following images that are accurate, commonly searched on stock sites, and comprehensively describe the images, what would you say?  How long would it take you?  Would you miss anything important?_
 
-![Banner of 4 Pattern Images](captone_info\pattern_banner.png)
+![Banner of 4 Pattern Images](captone_info/pattern_banner.png)
 
 _Now imagine you were working as a stock image contributer (focusing on seamless patterns) and you were making and uploading at least 500 of these per week.  Keywording has suddenly become a very non-trivial, tedius, and exhausting task._
 
@@ -14,15 +14,15 @@ Image tagging is commonly known to be one of the most successful applications of
 <br/><br/>
 ## Process:
 
-1. **Step 1, Initial Project Ideas:**  In this step I simply brainstormed potential project ideas. ([Link](captone_info\initial_ideas.pdf))
-2. **Step 2, Project Proposal:** My project proposal is [here](captone_info\project_proposal.pdf).
+1. **Step 1, Initial Project Ideas:**  In this step I simply brainstormed potential project ideas. ([Link](captone_info/initial_ideas.pdf))
+2. **Step 2, Project Proposal:** My project proposal is [here](captone_info/project_proposal.pdf).
 3. **Step 3, Data Collection:** I gathered a database of 100k images, keywords (50 each), and descriptions (200 characters each).  This data is private and as such not included here.
-4. **Step 4, Data Wrangling:** The code I used to clean and organize the data and images can be seen [here](app\clean_data_and_images.py) and [here](app\clean_images.py).
-5. **Step 5, Machine Learning/Deep Learning Prototype:**  The prototype for this project was a binary classification deep learning model that categorized pattern images into "floral" or "stripe".  The code can be seen [here](captone_info\floral_vs_stripes_bestsofar_4.py).
-6. **Step 6, Scale Your Prototype:**  After the binary classification, I took several steps to scale my prototype.  I first went for 6-class multi-label classication. Then I did 12-class.  Finally I used 145 classes.  This is the current project that I have arrived at and the model training code is here [here](app\train_model.py).  The 145 classes are listed in [config.py](app\config.py).
-7. **Step 7, Deployment Architecture:** I designed a very simple architecture for my deployment, sketched out [here](captone_info\deployment_arch.pdf).
-8. **Step 8, End-to-end code with testing:** I converted all notebooks to python files, added logging and unit testing, pulled all constants into [config.py](app\config.py), and organized everything neatly into modules.  This entire repo is the result.  Browse at your leisure.
-9. **Step 9, Deployment Implementation:** I implemented [server.py](app\server.py) which servers up both a web interface for predicting with the model and a super-simple API.  I containerized the project in a Docker image and then deployed the project on Render. [See the final result in action and try it out here.](https://springboard-capstone.onrender.com/)
+4. **Step 4, Data Wrangling:** The code I used to clean and organize the data and images can be seen [here](app/clean_data_and_images.py) and [here](app/clean_images.py).
+5. **Step 5, Machine Learning/Deep Learning Prototype:**  The prototype for this project was a binary classification deep learning model that categorized pattern images into "floral" or "stripe".  The code can be seen [here](captone_info/floral_vs_stripes_bestsofar_4.py).
+6. **Step 6, Scale Your Prototype:**  After the binary classification, I took several steps to scale my prototype.  I first went for 6-class multi-label classication. Then I did 12-class.  Finally I used 145 classes.  This is the current project that I have arrived at and the model training code is here [here](app/train_model.py).  The 145 classes are listed in [config.py](app/config.py).
+7. **Step 7, Deployment Architecture:** I designed a very simple architecture for my deployment, sketched out [here](captone_info/deployment_arch.pdf).
+8. **Step 8, End-to-end code with testing:** I converted all notebooks to python files, added logging and unit testing, pulled all constants into [config.py](app/config.py), and organized everything neatly into modules.  This entire repo is the result.  Browse at your leisure.
+9. **Step 9, Deployment Implementation:** I implemented [server.py](app/server.py) which servers up both a web interface for predicting with the model and a super-simple API.  I containerized the project in a Docker image and then deployed the project on Render. [See the final result in action and try it out here.](https://springboard-capstone.onrender.com/)
 <br/><br/>
 
 <br/><br/>
@@ -43,7 +43,7 @@ Image tagging is commonly known to be one of the most successful applications of
 
 ## Remarks
 
-The latest model I have (the included one) has an average accuracy (averaged among all keyword accuracies) of 92%.  This is misleading however, since most of the values for any one keyword are 0.  If you look to the other [metrics](app\models\model-20210317160456894379-18-MCC0_analysis_FULLDATA.csv), the numbers are much lower.  However, in my opinion this is also misleading, since I am dealing with VERY noisy data that was generated by tens of thousands of different people over dozens of years.
+The latest model I have (the included one) has an average accuracy (averaged among all keyword accuracies) of 92%.  This is misleading however, since most of the values for any one keyword are 0.  If you look to the other [metrics](app/models/model-20210317160456894379-18-MCC0_analysis_FULLDATA.csv), the numbers are much lower.  However, in my opinion this is also misleading, since I am dealing with VERY noisy data that was generated by tens of thousands of different people over dozens of years.
 
 I have very often found in my own subjective analysis that the keywords that are recommended by the model are BETTER than those the humans labelled their images with.  Stock image keywording is also a very subjective domain - it is often quite impossible for people to agree if a particular keyword applies to an image or not. (Is it elegant? Beautiful? Romantic? Bohemian? Rustic?).  That being the case, a think a subjective analysis of the results is not entirely uncalled for.
 
