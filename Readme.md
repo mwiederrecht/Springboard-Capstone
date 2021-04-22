@@ -1,4 +1,4 @@
-# Springboard Capstone Project"Seamless Pattern Auto-Keywording Web App
+# Springboard Capstone Project: Seamless Pattern Auto-Keywording Web App
 ### By: Melissa Wiederrecht
 ---
 <br/><br/>
